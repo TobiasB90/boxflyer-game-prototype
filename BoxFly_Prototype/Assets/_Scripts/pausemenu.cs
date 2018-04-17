@@ -11,6 +11,7 @@ public class pausemenu : MonoBehaviour {
     public GameObject pauseMenuUI;
     public GameObject retryMenuUI;
     public GameObject startMenuUI;
+    public GameObject HighScore;
 
     void Start()
     {
@@ -35,6 +36,7 @@ public class pausemenu : MonoBehaviour {
 
     public void Resume()
     {
+        HighScore.SetActive(false);
         pauseMenuUI.SetActive(false);
         startMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -44,6 +46,7 @@ public class pausemenu : MonoBehaviour {
 
     void Pause()
     {
+        HighScore.SetActive(true);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
         gameIsPaused = true;
@@ -56,6 +59,7 @@ public class pausemenu : MonoBehaviour {
 
     public void RetryGame()
     {
+        HighScore.SetActive(false);
         retryMenuUI.SetActive(false);
         SceneManager.LoadScene("Level_01");
     }

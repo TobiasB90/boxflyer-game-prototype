@@ -56,11 +56,11 @@ public class PlayerController : MonoBehaviour {
         m_FollowAngles = Vector3.SmoothDamp(m_FollowAngles, m_TargetAngles, ref m_FollowVelocity, dampingTime);
 
         // update the actual gameobject's rotation
-        PlayerModel.transform.localRotation = m_OriginalRotation * Quaternion.Euler(m_FollowAngles.x, m_FollowAngles.y, m_FollowAngles.z);
+        transform.localRotation = m_OriginalRotation * Quaternion.Euler(m_FollowAngles.x, m_FollowAngles.y, m_FollowAngles.z);
 
         // player, destroyer and builder flying forward at the speed of 'flyingspeed'
         float step = flyingspeed * Time.deltaTime;
-        PlayerModel.transform.position += PlayerModel.transform.forward * step;
+        transform.position += PlayerModel.transform.forward * step;
         EndlessBuilderDestroyer.transform.position = new Vector3(0, 0, PlayerModel.transform.position.z);
 
 

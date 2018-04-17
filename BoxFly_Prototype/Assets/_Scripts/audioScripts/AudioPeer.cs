@@ -17,7 +17,7 @@ public class AudioPeer : MonoBehaviour {
     public static float _Amplitude, _AmplitudeBuffer;
     float _AmplitudeHighest;
 
-
+ 
     // Use this for initialization
     void Start () {
         _audioSource = GetComponent<AudioSource>();

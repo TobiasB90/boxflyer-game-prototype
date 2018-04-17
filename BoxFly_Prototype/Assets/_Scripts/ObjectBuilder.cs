@@ -7,6 +7,8 @@ public class ObjectBuilder : MonoBehaviour {
     public GameObject[] TunnelSystems;
     public GameObject Environment;
     public GameObject FlyingObject;
+    public int LastTunnel = 0;
+    public int NextTunnel = 0;
     public float TunnelLength = 900;
     public float timesbuilt = 0;
 
@@ -25,9 +27,14 @@ public class ObjectBuilder : MonoBehaviour {
 
     IEnumerator spawnshit(float waittime)
     {
-        GameObject NewTunnel = Instantiate(TunnelSystems[Random.Range(0, TunnelSystems.Length)], transform.position, transform.rotation);
+        
+        GameObject NewTunnel = Instantiate(TunnelSystems[NextTunnel], transform.position, transform.rotation);
+        LastTunnel = NextTunnel;
         NewTunnel.transform.parent = Environment.transform;
         timesbuilt += 1;
+        while (NextTunnel == LastTunnel){
+            NextTunnel = Random.Range(0, TunnelSystems.Length);
+        }
         yield return new WaitForSeconds(waittime);
     }
 }
