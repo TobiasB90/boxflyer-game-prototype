@@ -22,11 +22,7 @@ public class colorcontrollereq : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         float step = colormng.colorchangingtime * Time.deltaTime;
-        lerpedColor = Color.Lerp(_example.GetColor("_EmissionColor"), colormng._nextColor_eq, step);
-        if (_example.GetColor("_EmissionColor") == colormng._nextColor_eq)
-        {
-            StartCoroutine(colormng.change_eq_color(1));
-        }
+        lerpedColor = Color.Lerp(_example.GetColor("_EmissionColor"), colormng._nextColor_edges, step);
 
         foreach (Renderer r in renderers)
         {

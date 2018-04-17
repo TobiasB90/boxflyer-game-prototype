@@ -7,8 +7,8 @@ public class DestructiblePlayer : MonoBehaviour {
 
     public GameObject ShatteredPlayer;
     public GameObject Player;
-    public GameObject RetryButton;
     public GameObject Canvas;
+    public GameObject retryMenuUI;
     statistics stats;
 	// Use this for initialization
 	void Start () {
@@ -24,10 +24,7 @@ public class DestructiblePlayer : MonoBehaviour {
     {
         stats.playing = false;
         Instantiate(ShatteredPlayer, transform.position, transform.rotation);
-        var button = Instantiate(RetryButton);
-        Button btn = button.GetComponent<Button>();
-        btn.onClick.AddListener(stats.Retry);
-        button.transform.SetParent(Canvas.transform, false);
         Destroy(Player);
+        retryMenuUI.SetActive(true);
     }
 }
