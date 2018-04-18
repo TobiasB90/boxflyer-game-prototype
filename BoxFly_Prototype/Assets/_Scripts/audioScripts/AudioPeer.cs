@@ -17,15 +17,26 @@ public class AudioPeer : MonoBehaviour {
     public static float _Amplitude, _AmplitudeBuffer;
     float _AmplitudeHighest;
 
+    public bool loadedalready = false;
  
     // Use this for initialization
     void Start () {
         _audioSource = GetComponent<AudioSource>();
         AudioProfile(_audioProfile);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void Awake()
+    {
+        DontDestroyOnLoad(this);
+
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
         GetSpectrumAudioSource();
         MakeFrequencyBands();
         BandBuffer();
