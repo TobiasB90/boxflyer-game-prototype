@@ -66,4 +66,10 @@ public class pausemenu : MonoBehaviour {
         retryMenuUI.SetActive(false);
         SceneManager.LoadScene("Level_01");
     }
+
+    public void ResetHighScore()
+    {
+        PlayerPrefs.DeleteKey("HighScore");
+        stats.UpdateHighScore();
+    }
 }
