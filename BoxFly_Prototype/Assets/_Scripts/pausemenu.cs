@@ -12,16 +12,19 @@ public class pausemenu : MonoBehaviour {
     public GameObject retryMenuUI;
     public GameObject startMenuUI;
     public GameObject HighScore;
+    public GameObject gameStatistics;
+    statistics stats;
 
     void Start()
     {
         Time.timeScale = 0;
         gameIsPaused = true;
+        stats = gameStatistics.GetComponent<statistics>();
     }
 
     // Update is called once per frame
     void Update () {
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Escape) && stats.alive)
         {
             if (gameIsPaused)
             {

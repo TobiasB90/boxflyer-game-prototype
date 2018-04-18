@@ -246,6 +246,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a49db4ffd3d9c64ea968aeb0332f42b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &28994885 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1131652708419360, guid: 8a49db4ffd3d9c64ea968aeb0332f42b,
+    type: 2}
+  m_PrefabInternal: {fileID: 28994884}
 --- !u!1 &46908430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,6 +1757,7 @@ MonoBehaviour:
   retryMenuUI: {fileID: 1507009332}
   startMenuUI: {fileID: 1630936029}
   HighScore: {fileID: 1255680145}
+  gameStatistics: {fileID: 28994885}
 --- !u!1 &1015178928
 GameObject:
   m_ObjectHideFlags: 0

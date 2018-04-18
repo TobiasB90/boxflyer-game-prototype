@@ -10,6 +10,7 @@ public class statistics : MonoBehaviour {
     public float Score = 0;
     public float ScoreMultiplier = 50;
     public bool playing = true;
+    public bool alive = true;
     public Text HighScoreTXT;
 
     // Use this for initialization
@@ -18,6 +19,7 @@ public class statistics : MonoBehaviour {
         Score = 0;
         playing = true;
         HighScoreTXT.text = "HIGHSCORE: " + Mathf.Round(PlayerPrefs.GetFloat("HighScore", 0)).ToString();
+        alive = true;
 	}
 	
 	// Update is called once per frame

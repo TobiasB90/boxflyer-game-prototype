@@ -3357,7 +3357,7 @@ GameObject:
   - component: {fileID: 4577671927777166}
   - component: {fileID: 65222153571408300}
   m_Layer: 0
-  m_Name: TunnelSystem_01_Walls_03
+  m_Name: TunnelSystem_02_Walls_TopDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18668,8 +18668,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.000002, y: 15, z: 10.000005}
-  m_Center: {x: 0, y: -7, z: 0}
+  m_Size: {x: 10, y: 2.5, z: 10.000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65481614331325222
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -18704,8 +18704,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.000002, y: 15, z: 10.000005}
-  m_Center: {x: 0, y: -7, z: 0}
+  m_Size: {x: 10, y: 2.5, z: 10.000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65562445094529696
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -18836,8 +18836,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.000002, y: 15, z: 10.000005}
-  m_Center: {x: 0, y: -7, z: 0}
+  m_Size: {x: 10, y: 2.5, z: 10.000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65985139121694372
 BoxCollider:
   m_ObjectHideFlags: 1

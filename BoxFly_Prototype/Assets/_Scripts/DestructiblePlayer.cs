@@ -33,5 +33,6 @@ public class DestructiblePlayer : MonoBehaviour {
         Destroy(Player);
         retryMenuUI.SetActive(true);
         HighScore.SetActive(true);
+        stats.alive = false;
     }
 }
